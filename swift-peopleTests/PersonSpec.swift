@@ -83,19 +83,19 @@ class PersonSpec: QuickSpec {
             
             describe("celebrateBirthday") {
                 it("should increment mark's age by one to 30") {
-                    mark.celebrateBirthday()
+                    _ = mark.celebrateBirthday()
                     
                     expect(mark.ageInYears).to(equal(30))
                 }
                 
                 it("should increment tim's age by one to 65536") {
-                    tim.celebrateBirthday()
+                   _ =  tim.celebrateBirthday()
                     
                     expect(tim.ageInYears).to(equal(65536))
                 }
                 
                 it("should leave jim's nil age as nil") {
-                    jim.celebrateBirthday()
+                   _ =  jim.celebrateBirthday()
                     
                     expect(jim.ageInYears).to(beNil())
                 }

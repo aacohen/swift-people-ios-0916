@@ -28,25 +28,30 @@ class Person {
      //III.
     
     func celebrateBirthday () -> String {
+        var ext: String = ""
+        var age: Int = 0
         if ageInYears == nil {
           let birthdayName = self.name.uppercased()
-            return "HAPPY BIRTHDAY, \(birthdayName)"
+            return "HAPPY BIRTHDAY, \(birthdayName)!!!"
           }
         else {
-//            //if let ageInYears = self.ageInYears  {
-//              var age = ageInYears += 1
-//            }
-//            var ext = age.ordinal.uppercased()
-//            let birthdayName = self.name.uppercased()
-            return ("HAPPY BIRTHDAY, )!!")
-            //how to put .ordinal in here. it doesn't auto complete?
+            if let ageInYears = self.ageInYears  {
+                print("ageInYears:\(ageInYears)")
+                age = ageInYears + 1
+                print("age: \(age)")
+                ext = age.ordinal().uppercased()
+                let birthdayName = self.name.uppercased()
+                self.ageInYears = age
+                return ("HAPPY \(age)\(ext) BIRTHDAY, \(birthdayName)!!!")
+            }
+            
         }
        return ""
     }
     
     //IV. skills methods
     
-    func learnSkillsBash() {
+    func learnSkillBash() {
     skills.insert("bash")
     }
     
